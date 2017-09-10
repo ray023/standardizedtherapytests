@@ -1,0 +1,12 @@
+<div ng-show="data.AnswerCount >= data.REQUIRED_COUNT" class="row">
+    <div class="col col-75 positive">DASH Disability/Symptom Score</div>
+    <div class="col positive text-right">{{(((data.Sum)/data.AnswerCount) - 1) * 25 | number : 1}}</div>
+</div>
+<div ng-show="data.AnswerCount < data.REQUIRED_COUNT" >
+    <div class="row">
+        <div class="col assertive-bg white-text">{{data.REQUIRED_MESSAGE}}</div>
+    </div>
+    <div class="row">
+        <div class="col assertive-bg white-text">You must answer {{data.REQUIRED_COUNT - data.AnswerCount}} more questions</div>
+    </div>
+</div>

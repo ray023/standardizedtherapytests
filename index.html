@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="msapplication-tap-highlight" content="no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+        <meta http-equiv="Content-Security-Policy"
+              content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"/>
+        <link href="lib/css/ionic.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Standardized Therapy Tests</title>
+    </head>
+
+    <body ng-app="sttApp">
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view></ion-nav-view>
+
+        <script src="lib/js/ionic.bundle.js"></script>
+        <script src="cordova.js"></script>
+
+        <script src="app/app.js"></script>
+        <script src="app/configureApp.js"></script>
+        <script src="app/standardized-tests/configureTests.js"></script>
+
+        <script src="app/standardized-tests/sttTestCtrl.js"></script>
+
+        <!--Shared-->
+        <script src="app/shared/timer/sttTimerDirectives.js"></script>
+
+        <!--Tinetti-->
+        <script src="app/standardized-tests/tinetti/sstTinettiDirectives.js"></script>
+        <script src="app/standardized-tests/tinetti/sstTinettiService.js"></script>
+        <script src="app/standardized-tests/tinetti/sstTinettiCtrl.js"></script>
+
+        <!--Barthel-->
+        <script src="app/standardized-tests/barthel/sstBarthelDirectives.js"></script>
+        <script src="app/standardized-tests/barthel/sstBarthelService.js"></script>
+        <script src="app/standardized-tests/barthel/sstBarthelCtrl.js"></script>
+
+        <!--Berg-->
+        <script src="app/standardized-tests/berg/sstBergDirectives.js"></script>
+        <script src="app/standardized-tests/berg/sstBergService.js"></script>
+        <script src="app/standardized-tests/berg/sstBergCtrl.js"></script>
+
+        <!--Dash-->
+        <script src="app/standardized-tests/dash/sstDashDirectives.js"></script>
+        <script src="app/standardized-tests/dash/sstDashService.js"></script>
+        <script src="app/standardized-tests/dash/sstDashCtrl.js"></script>
+
+        <!--Tug-->
+        <script src="app/standardized-tests/tug/sstTugCtrl.js"></script>
+        <script src="app/standardized-tests/tug/tugDirectives.js"></script>
+
+        <!--FOIS-->
+        <script src="app/standardized-tests/fois/sstFoisCtrl.js"></script>
+
+        <script src="app/settings/sttSettingsCtrl.js"></script>
+    </body>
+</html>

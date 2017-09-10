@@ -1,0 +1,17 @@
+<ion-view view-title="Standardized Tests">
+    <ion-content>
+        <ion-list>
+            <label class="item item-input">
+                <input type="text" placeholder="Search for test..." ng-model="nameText">
+            </label>
+        </ion-list>
+        <ion-list>
+            <div ng-repeat="categoryTest in data.categoryTests" >
+                <div class="item item-divider" ng-hide="!!nameText">{{categoryTest.category}}</div>
+            <ion-item ng-repeat="test in categoryTest.tests | filter:nameText" type="item-text-wrap" href="#/tab/standardized-tests/{{test.id}}">
+                {{test.testName}}
+            </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

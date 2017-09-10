@@ -1,0 +1,25 @@
+<div class="calm calm-bg">
+    <h3>Result</h3>
+</div>
+<div class="row">
+    <div class="col col-75 positive">Balance</div>
+    <div class="col positive text-right">{{data.balanceTests.Sum}} / {{data.balanceTests.MAX_SCORE}}</div>
+</div>
+<div class="row">
+    <div class="col col-75 positive">Gait</div>
+    <div class="col positive text-right">{{data.gaitTests.Sum}} / {{data.gaitTests.MAX_SCORE}}</div>
+</div>
+<div class="row">
+    <div class="col col-75 positive">Total</div>
+    <div class="col positive text-right">{{data.gaitTests.Sum + data.balanceTests.Sum}} / {{data.balanceTests.MAX_SCORE + data.gaitTests.MAX_SCORE}}</div>
+</div>
+<div class="row">
+    <div class="col col-50 positive">Interpretation</div>
+    <div class="col">
+        <div class="text-right">
+            <div ng-if="data.gaitTests.Sum + data.balanceTests.Sum < 19" class="assertive">High Fall Risk</div>
+            <div ng-if="data.gaitTests.Sum + data.balanceTests.Sum >= 19 && data.gaitTests.Sum + data.balanceTests.Sum <= 24" class="energized">Medium Fall Risk</div>
+            <div ng-if="data.gaitTests.Sum + data.balanceTests.Sum > 24" class="balanced">Low Fall Risk</div>
+        </div>
+    </div>
+</div>

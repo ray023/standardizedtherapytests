@@ -1,0 +1,23 @@
+<h3 class="title">{{data.testName}}</h3>
+<h4 class="positive">Score: {{data.Sum}} / {{data.MAX_SCORE}}</h4>
+<div class="list">
+    <div ng-repeat="test in data.Questions">
+        <div class="row bal">
+            <div class="col col-90 white-text balanced-bg">{{test.name}}</div>
+            <div class="col text-right white-text calm-bg">{{data.Answers[test.id]}}</div>
+        </div>
+        <div class="row">
+            <div class="col">INSTRUCTIONS:</div>
+        </div>
+        <div class="row">
+            <div class="col">{{test.instructions}}</div>
+        </div>
+        <ion-radio ng-repeat="item in test.options" ng-value="item.value" ng-model="data.Answers[test.id]"
+                   ng-click="calculateSum()" name="{{[test.id]}}">
+            {{ item.text }}
+        </ion-radio>
+        <div class="row" ng-show="!!test.additionalInfo">
+            <div class="col">{{test.additionalInfo}}</div>
+        </div>
+    </div>
+</div>
